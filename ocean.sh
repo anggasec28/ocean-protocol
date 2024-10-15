@@ -34,27 +34,29 @@ sudo apt-get update && sudo apt get upgrade -y
 sudo apt install curl -y
 clear
 
-show "Install Node..."
-if ! source <(wget -O - https://raw.githubusercontent.com/anggasec28/modul/refs/heads/main/node.sh); then
-    show "Gagal install Node." "error"
+show "Install Docker..."
+if ! source <(wget -O - https://raw.githubusercontent.com/anggasec28/modul/refs/heads/main/docker.sh); then
+    show "Gagal install Docker." "error"
     exit 1
 fi
-show "Sukses install Node!" "sukses"
+show "Sukses install Docker!" "sukses"
 
 # membuat folder
-show "Installing PM2" "progress"
-npm install -g pm2
+mkdir ocean && \
+cd ocean
 
-# clone github
-show "Installing Repo Github"
-git clone https://github.com/oceanprotocol/ocean-node.git
-
+# clear ram
 clear_ram_cache() {
     show "Membersihkan RAM cache..." "proses"
     sudo sh -c "sync; echo 3 > /proc/sys/vm/drop_caches"
     show "RAM sukses dibersihkan!"
 }
 
-#start
-npm run envSetup
-pm2 start npm --name "ocean" -- run start
+# install binary
+curl -O https://raw.githubusercontent.com/oceanprotocol/ocean-node/main/scripts/ocean-node-quickstart.sh
+chmod +x ocean-node-quickstart.sh
+./ocean-node-quickstart.sh
+
+# start node
+docker-compose up -d
+docker ps

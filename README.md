@@ -14,7 +14,7 @@ https://nodes.oceanprotocol.com ( Paste IP Vps )
 
 ## Install & Run 1 Click
 ```
-curl -O https://raw.githubusercontent.com/anggasec28/ocean-protocol/refs/heads/main/ocean.sh | bash
+bash <(curl -s https://raw.githubusercontent.com/anggasec28/ocean-protocol/refs/heads/main/ocean.sh)
 ```
 
 ## Eligibility Issue 

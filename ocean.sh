@@ -59,4 +59,3 @@ chmod +x ocean-node-quickstart.sh
 
 # start node
 docker-compose up -d
-docker ps

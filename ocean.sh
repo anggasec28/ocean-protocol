@@ -45,17 +45,17 @@ show "Sukses install Docker!" "sukses"
 mkdir ocean && \
 cd ocean
 
+# install binary
+curl -O https://raw.githubusercontent.com/oceanprotocol/ocean-node/main/scripts/ocean-node-quickstart.sh
+chmod +x ocean-node-quickstart.sh
+./ocean-node-quickstart.sh
+
 # clear ram
 clear_ram_cache() {
     show "Membersihkan RAM cache..." "proses"
     sudo sh -c "sync; echo 3 > /proc/sys/vm/drop_caches"
     show "RAM sukses dibersihkan!"
 }
-
-# install binary
-curl -O https://raw.githubusercontent.com/oceanprotocol/ocean-node/main/scripts/ocean-node-quickstart.sh
-chmod +x ocean-node-quickstart.sh
-./ocean-node-quickstart.sh
 
 # start node
 docker-compose up -d

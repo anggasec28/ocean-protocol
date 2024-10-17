@@ -11,8 +11,7 @@
 
 ## Install & Run 1 Click
 ```
-curl -O https://raw.githubusercontent.com/anggasec28/ocean-protocol/refs/heads/main/ocean.sh
-## Check Eligibility Issue
+curl -O https://raw.githubusercontent.com/anggasec28/ocean-protocol/refs/heads/main/ocean.sh | bash
 ```
 
 ## Eligibility Issue 

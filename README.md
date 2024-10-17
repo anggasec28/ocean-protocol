@@ -6,8 +6,11 @@
 - **CPU**: 1 cores
 - **Disk Space**: 4 GB
 
+## Check Node
+Tampilan Jika node sudah run dan sukses accept block 
 
-
+https://nodes.oceanprotocol.com ( Paste IP Vps )
+![IMG_4716](https://github.com/user-attachments/assets/08ac6fa6-9af0-4c60-9023-3ce7c4e5f82e)
 
 ## Install & Run 1 Click
 ```
